@@ -21,8 +21,14 @@ for datum in data:
         rainfall = datum['value']
         precipitation_per_month[month-1] += rainfall
 
-print(precipitation_per_month)
-print(total_precipitation)
+# Finding percentage precipitation
+percentage_precipitation = []
+for precipitation in precipitation_per_month:
+    percentage_precipitation.append(precipitation/total_precipitation)
+print(percentage_precipitation)
+
+# print(precipitation_per_month)
+# print(total_precipitation)
 # [1693, 730, 870, 752, 924, 601, 54, 104, 996, 908, 1192, 2356]
 # Answer is 11180
 
