@@ -31,4 +31,16 @@ print(percentage_precipitation)
 # print(total_precipitation)
 # [1693, 730, 870, 752, 924, 601, 54, 104, 996, 908, 1192, 2356]
 # Answer is 11180
-
+
+data_json = {
+	"Seattle": {
+		"station": "GHCND:US1WAKG0038", 
+		"state": "WA", 
+		"totalMonthlyPrecipitation": [precipitation_per_month], 
+		"relativeMonthlyPrecipitation": [percentage_precipitation], 
+		"totalYearlyPrecipitation": total_precipitation,
+	},
+}
+
+with open('passfail_4_python.json', 'w', encoding='utf8') as file:
+    json.dump(data_json, file)
